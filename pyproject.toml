@@ -5,7 +5,7 @@ description = "Social network for food lovers"
 authors = ["Damn_Imposter <33062172+Impo5ter@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "3.9.5"
 Django = "^3.2.3"
 djangorestframework = "^3.12.4"
 Pillow = "^8.2.0"
