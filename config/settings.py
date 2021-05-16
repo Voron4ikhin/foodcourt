@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'djoser',
-    #'src.profiles.apps',
     'src.profiles',
 ]
 
@@ -129,4 +128,5 @@ SIMPLE_JWT = {
    # 'AUTH_HEADER_TYPES': ('JWT',),
 }
 
-#AUTH_USER_MODEL = 'profile.OrdUser'
+
+AUTH_USER_MODEL = 'profiles.UserFC'
