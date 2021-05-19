@@ -3,6 +3,8 @@ from .models import UserFC
 
 
 class GetUserFCSerializer(serializers.ModelSerializer):
+    avatar = serializers.ImageField(read_only=True)
+
     #Вывод информации о User
     class Meta:
         model = UserFC
