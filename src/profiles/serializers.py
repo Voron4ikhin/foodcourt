@@ -35,3 +35,11 @@ class GetUserFCPublicSerializer(serializers.ModelSerializer):
             "user_permissions"
         )
 
+
+class UserByFollowerSerializer(serializers.ModelSerializer):
+    avatar = serializers.ImageField(read_only=True)
+
+    class Meta:
+        model = UserFC
+        fields = ('id', 'username', 'avatar')
+
