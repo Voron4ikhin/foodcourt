@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'mptt',
     'drf_yasg',
     'src.followers',
+    'src.feed',
     'src.profiles',
     'src.wall',
 ]
