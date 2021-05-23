@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'djoser',
     'mptt',
     'drf_yasg',
+    'src.followers',
     'src.profiles',
     'src.wall',
 ]
