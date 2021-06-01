@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'djoser',
     'mptt',
     'drf_yasg',
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -147,6 +149,7 @@ CORS_ORIGIN_WHITELIST = [
     "http://127.0.0.1:4200",
     "http://localhost:1313",
     "http://localhost:4200",
+    "http://localhost"
 ]
 
 DJOSER = {
@@ -184,11 +187,11 @@ SIMPLE_JWT = {
 }
 
 
+SECURE_SSL_REDIRECT = False
 
-
-DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", None)
-EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", None)
-EMAIL_HOST = os.environ.get("EMAIL_HOST", None)
-EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", None)
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", None)
-EMAIL_PORT = os.environ.get("EMAIL_PORT", None)
+# #DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", None)
+# EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", None)
+# EMAIL_HOST = os.environ.get("EMAIL_HOST", None)
+# EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", None)
+# EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", None)
+# EMAIL_PORT = os.environ.get("EMAIL_PORT", None)

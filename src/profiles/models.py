@@ -13,7 +13,7 @@ class UserFC(AbstractUser):
         ('female', 'female')
     )
     middle_name = models.CharField(max_length=50, null = True)
-    phone = models.CharField(max_length=14, null = True)
+    phone = models.CharField(max_length=12, null = True)
     avatar = models.ImageField(upload_to='user/avatar/', blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
     birthday = models.DateField(blank=True, null=True)
